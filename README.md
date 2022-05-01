@@ -14,11 +14,15 @@ The purpose of this project is to analyze the data,by calculating certain metric
 *Language*: Python 3.9.7. 
 
 ## Overview of the code
-In order to open and read the csv file we need to import the corresponding dependencies. The file path is specified using `join()` method so that based upon the operating system, the direct path is set.The CSV files are converted in to DataFrames and they merged using `merge()` method.The total rides are calculated based on the ride count and grouped by type of the cities.The same is done for calculating the total drivers,total fare.Based on the above calculations the average fare per driver and per ride are calculated.Finally the calculated result are displayed in the Pyber summary Dataframe.
-For creating mutltiple line plot that shows total weekly of the fares for each city type,we need to perform sum operation on the fares and it should be grouped by date and type.The index is reset by using `reset_index()` method.The pivot table is created with index as date,columns as city types and values as fares.The new dataframe is created from the pivot table by specifying month range criteria from January to April 2019.The datetype of date index is converted to datetime using `to_datetime()` method.The `resample()` method is applied on the DataFrame to create the fares based on the each week for each city type.
+In order to open and read the csv file we need to import the corresponding dependencies. The file path is specified using `join()` method so that based upon the operating system, the direct path is set.<br>
+<img src = "https://github.com/fathi129/PyBer_Analysis/blob/master/Screenshots/csvpath.png" width = 600><br>
+The CSV files are converted in to DataFrames and they merged using `merge()` method.The total rides are calculated based on the ride count and grouped by type of the cities.The same is done for calculating the total drivers,total fare.Based on the above calculations the average fare per driver and per ride are calculated.Finally the calculated result are displayed in the Pyber summary Dataframe.<br>
+<img src = "https://github.com/fathi129/PyBer_Analysis/blob/master/Screenshots/calc.png" width = 800><br>
+For creating mutltiple line plot that shows total weekly of the fares for each city type,we need to perform sum operation on the fares and it should be grouped by date and type.The index is reset by using `reset_index()` method.The pivot table is created with index as date,columns as city types and values as fares.<br>
+<img src = "https://github.com/fathi129/PyBer_Analysis/blob/master/Screenshots/pivot.png" width = 800><br>
+The new dataframe is created from the pivot table by specifying month range criteria from January to April 2019.The datetype of date index is converted to datetime using `to_datetime()` method.The `resample()` method is applied on the DataFrame to create the fares based on the each week for each city type.<br>
+<img src = "https://github.com/fathi129/PyBer_Analysis/blob/master/Screenshots/Resample.png" width = 800><br>
 The results are plotted using `plot()` method and suitable titles are given for y axis,title of the chart and the chart is saved using `savefig()` method.Final chart is displayed by using `show()` method.
-
-
 
 ## Results
 The Pyber Summary Dataframe is created based upon the data gathered by performing certain operations on the given datasets.
